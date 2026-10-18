@@ -201,3 +201,29 @@ for slug, (title, desc) in SUBPAGES.items():
 
 (site / "robots.txt").write_text("User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\n")
 print("built download/admin pages:", sorted(p.name for p in site.rglob("*") if p.is_file()))
+
+
+# ---------- cache busting ----------
+# Script and style URLs get ?v=<content hash>, so browsers fetch new files right after each deploy
+# instead of keeping an old copy for up to an hour.
+import hashlib
+
+
+def bust(html_path):
+    t = html_path.read_text()
+
+    def sub(m):
+        attr, path = m.group(1), m.group(2)
+        f = site / path.lstrip("/")
+        if not f.exists():
+            return m.group(0)
+        v = hashlib.sha1(f.read_bytes()).hexdigest()[:10]
+        return f'{attr}="{path}?v={v}"'
+
+    t = re.sub(r'(src|href)="(/?assets/[^"?]+\.(?:js|css))"', sub, t)
+    html_path.write_text(t)
+
+
+for name in ("index.html", "download.html", "admin.html"):
+    bust(site / name)
+print("cache-busted script and style URLs")

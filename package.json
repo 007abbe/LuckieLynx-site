@@ -3,7 +3,7 @@
   "private": true,
   "description": "luckielynx.com: static site + download worker on Cloudflare, accounts on Supabase",
   "scripts": {
-    "build": "python3 build.py",
+    "build-site": "python3 build.py",
     "deploy": "wrangler deploy"
   },
   "devDependencies": {

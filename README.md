@@ -25,7 +25,7 @@ All page sources live outside `site/`:
 - `faq.json`: FAQ text (also used for Google structured data)
 - `worker/index.js`: the download service
 
-After editing, run `python3 build.py` (needs Pillow) to regenerate `site/`, then commit and push. Cloudflare redeploys on every push to `main`.
+After editing, run `python3 build.py` (needs Pillow) to regenerate `site/`, then commit and push. Cloudflare redeploys on every push to `main`. Its build command stays empty: `site/` is committed already built.
 
 ## One-time setup
 
