@@ -1,0 +1,50 @@
+<main class="sub-main">
+  <div class="wrap">
+    <span class="label"><span class="spark" aria-hidden="true"></span>Tester downloads</span>
+    <h1>Downloads</h1>
+
+    <div class="state" id="state-loading">
+      <p>Checking your access...</p>
+    </div>
+
+    <div class="state" id="state-signedout" hidden>
+      <p>Sign in to see the builds you have access to. Downloads are for invited alpha and beta testers.</p>
+      <div class="row">
+        <a class="btn btn-gold notched" href="/#signin">Sign in</a>
+        <a class="btn btn-quiet notched" href="/#signup">Create an account</a>
+      </div>
+    </div>
+
+    <div class="state" id="state-noaccess" hidden>
+      <p>Downloads are for invited testers. If you were given a tester code, enter it here to unlock the current build.</p>
+      <form class="code-form inline-code" id="dl-code-form" novalidate>
+        <label for="dl-code-input" class="sr-only">Tester code</label>
+        <div class="field">
+          <input type="text" id="dl-code-input" placeholder="XXXX-XXXX-XXXX" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="48">
+          <button class="btn btn-gold notched" id="dl-code-submit" type="submit">Unlock</button>
+        </div>
+        <p class="form-note" id="dl-code-note" role="status"></p>
+      </form>
+      <p>No code? Join the Discord to hear when the next test opens.</p>
+      <div class="row"><a class="btn btn-discord notched" href="https://discord.gg/nm3kwmGbHj">Join our server</a></div>
+    </div>
+
+    <div class="state" id="state-access" hidden>
+      <p class="sub-lede" id="access-lede">You're in. Here are the builds you can play.</p>
+      <div class="builds" id="builds"></div>
+      <p class="form-note" id="dl-note" role="status"></p>
+      <p class="hint">Download links work for 10 minutes. Builds are for invited testers, so please don't share them.</p>
+      <details class="more">
+        <summary>Have a code for another phase?</summary>
+        <form class="code-form inline-code" id="dl-code-form-2" novalidate>
+          <label for="dl-code-input-2" class="sr-only">Tester code</label>
+          <div class="field">
+            <input type="text" id="dl-code-input-2" placeholder="XXXX-XXXX-XXXX" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="48">
+            <button class="btn btn-gold notched" id="dl-code-submit-2" type="submit">Unlock</button>
+          </div>
+          <p class="form-note" id="dl-code-note-2" role="status"></p>
+        </form>
+      </details>
+    </div>
+  </div>
+</main>

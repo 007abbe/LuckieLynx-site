@@ -1,0 +1,1 @@
+window.LL_CONFIG = {"url": "https://qeslzsokehipmemjfcva.supabase.co", "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlc2x6c29rZWhpcG1lbWpmY3ZhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIyMjUyNjcsImV4cCI6MjEwNzgwMTI2N30.8GxM7Zqa1YKWIkuVHIu_FE5E35lSL1TK1LRNS3Dsjjw", "preview": false};

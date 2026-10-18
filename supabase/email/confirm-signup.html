@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="supported-color-schemes" content="dark">
+<title>Confirm your account</title>
+</head>
+<body style="margin:0;padding:0;background-color:#06120c;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Confirm your email to activate your LuckieLynx account.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#06120c;">
+  <tr>
+    <td align="center" style="padding:32px 16px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:520px;">
+        <tr>
+          <td style="padding:0 0 20px 0;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td style="vertical-align:middle;padding-right:10px;"><img src="https://luckielynx.com/assets/icon.png" width="40" height="40" alt="" style="display:block;border:0;"></td>
+                <td style="vertical-align:middle;font-family:Georgia,'Times New Roman',serif;font-size:24px;color:#d9dce2;">LuckieLynx</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color:#0f1f18;border:1px solid #6b5a22;padding:32px 30px;">
+            <p style="margin:0 0 14px 0;font-family:'Courier New',Courier,monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#e8bf4a;">+ Early access</p>
+            <h1 style="margin:0 0 18px 0;font-family:Georgia,'Times New Roman',serif;font-weight:normal;font-size:30px;line-height:1.2;color:#f4f1e8;">Confirm your account</h1>
+            <p style="margin:0 0 14px 0;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#c9cfca;">Hi {{ if .Data.username }}{{ .Data.username }}{{ else }}there{{ end }},</p>
+            <p style="margin:0 0 14px 0;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#c9cfca;">Thanks for signing up. Your username is reserved. Confirm your email to activate your account and claim your spot for the first matches.</p>
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:26px 0 26px 0;">
+              <tr>
+                <td style="background-color:#e8b93a;">
+                  <a href="{{ .ConfirmationURL }}" style="display:inline-block;padding:15px 26px;font-family:'Courier New',Courier,monospace;font-size:15px;font-weight:bold;letter-spacing:1px;color:#0b1611;text-decoration:none;">Confirm my account</a>
+                </td>
+              </tr>
+            </table>
+            <p style="margin:0 0 8px 0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.6;color:#9aa39e;">Button not working? Copy this link into your browser:</p>
+            <p style="margin:0 0 22px 0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.6;word-break:break-all;"><a href="{{ .ConfirmationURL }}" style="color:#e8bf4a;">{{ .ConfirmationURL }}</a></p>
+            <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.6;color:#9aa39e;">Didn't sign up for LuckieLynx? You can ignore this email and no account will be activated.</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:20px 4px 0 4px;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.6;color:#7d877f;">
+            LuckieLynx &middot; <a href="https://luckielynx.com" style="color:#9aa39e;">luckielynx.com</a> &middot; 18+. Play sharp. Play responsibly.<br>
+            You're getting this because this address was used on luckielynx.com.
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

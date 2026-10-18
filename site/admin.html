@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#06120c">
+<meta name="robots" content="noindex">
+<title>Admin | LuckieLynx</title>
+<meta name="description" content="LuckieLynx admin.">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&family=Press+Start+2P&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="LuckieLynx home">
+      <img src="/assets/icon-64.png" alt="" width="36" height="36">
+      <span>LuckieLynx</span>
+    </a>
+    <nav class="nav" aria-label="Pages">
+      <a href="/">Home</a>
+      <a href="/download" id="nav-download" hidden>Download</a>
+      <a href="/admin" id="nav-admin" hidden>Admin</a>
+      <span class="nav-actions">
+        <a class="btn btn-quiet notched" id="nav-account" href="/#signup" hidden>Account</a>
+        <button class="btn btn-quiet notched" id="nav-signout" type="button" hidden>Sign out</button>
+        <a class="btn btn-gold notched" id="nav-signin" href="/#signin">Sign in</a>
+      </span>
+    </nav>
+  </div>
+</header>
+<main class="sub-main">
+  <div class="wrap">
+    <span class="label"><span class="spark" aria-hidden="true"></span>Admin</span>
+    <h1>Tester access</h1>
+
+    <div class="state" id="state-loading">
+      <p>Loading...</p>
+    </div>
+
+    <div class="state" id="state-signedout" hidden>
+      <p>Sign in with your admin account to manage tester access.</p>
+      <div class="row"><a class="btn btn-gold notched" href="/#signin">Sign in</a></div>
+    </div>
+
+    <div class="state" id="state-denied" hidden>
+      <p>This page is only for LuckieLynx admins.</p>
+      <div class="row"><a class="btn btn-quiet notched" href="/">Back to home</a></div>
+    </div>
+
+    <div id="state-admin" hidden>
+      <div class="admin-stats" id="stats"></div>
+
+      <h2 class="admin-h2">Phases</h2>
+      <p class="sub-lede">Open a phase to let its testers download. Each phase has its own code and build file.</p>
+      <div class="phase-grid" id="phases"></div>
+
+      <h2 class="admin-h2">Testers</h2>
+      <form class="grant-form" id="grant-form" novalidate>
+        <div class="f">
+          <label for="grant-user">USERNAME</label>
+          <input type="text" id="grant-user" placeholder="Player username" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="f">
+          <label for="grant-phase">PHASE</label>
+          <select id="grant-phase"></select>
+        </div>
+        <button class="btn btn-gold notched" id="grant-submit" type="submit">Give access</button>
+      </form>
+      <p class="form-note" id="grant-note" role="status"></p>
+      <div class="table-wrap">
+        <table class="testers">
+          <thead><tr><th>USERNAME</th><th>PHASE</th><th>HOW</th><th>SINCE</th><th></th></tr></thead>
+          <tbody id="tester-rows"></tbody>
+        </table>
+        <p class="empty" id="tester-empty" hidden>No testers yet. Share a code or add someone by username.</p>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="LuckieLynx home">
+      <img src="/assets/icon-64.png" alt="" width="30" height="30">
+      <span>LuckieLynx</span>
+    </a>
+    <p>© 2026 LuckieLynx, formerly LuckyLynx &amp; Ace. Play sharp. Play responsibly. 18+.</p>
+    <span class="label">EARLY ACCESS</span>
+  </div>
+</footer>
+<script src="/assets/supabase-2.45.4.js"></script>
+<script src="/assets/config.js"></script>
+<script src="/assets/common.js"></script>
+<script src="/assets/admin.js"></script>
+</body>
+</html>
