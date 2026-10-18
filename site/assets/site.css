@@ -236,6 +236,12 @@ h2 {
 .ledger .total { border-bottom: 0; }
 .ledger .total dt { color: var(--fg); font-weight: 600; }
 .ledger .total dd { color: var(--gold); }
+.ledger dd { text-align: right; }
+.ledger dd small { display: block; margin-top: 5px; font-family: var(--f-body); font-size: 12px; letter-spacing: 0; color: var(--muted); }
+.coin-key { margin: -8px 0 0; font-size: 13px; color: var(--muted); }
+.rate { margin: 0 0 14px; padding: 16px 18px; display: grid; gap: 8px; background: oklch(82% .14 88 / .07); box-shadow: inset 0 0 0 1px oklch(82% .14 88 / .35); }
+.rate p { margin: 0; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; }
+.rate b { font-family: var(--f-pixel); font-size: 13px; font-weight: 400; letter-spacing: .06em; color: var(--gold); }
 
 /* steps: six-step match flow */
 .steps.six { grid-template-columns: repeat(3, 1fr); }

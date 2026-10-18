@@ -16,7 +16,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="LuckieLynx: Grab your Nexor. Make the train.">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://luckielynx.com/#org", "name": "LuckieLynx", "alternateName": "LuckyLynx & Ace", "url": "https://luckielynx.com/", "logo": "https://luckielynx.com/assets/icon.png", "sameAs": ["https://discord.gg/nm3kwmGbHj", "https://luckylynxace.com"]}, {"@type": "WebSite", "@id": "https://luckielynx.com/#site", "name": "LuckieLynx", "url": "https://luckielynx.com/", "publisher": {"@id": "https://luckielynx.com/#org"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is LuckieLynx?", "acceptedAnswer": {"@type": "Answer", "text": "LuckieLynx is a skill-based play-to-earn game in development. Its main mode, Nexor Extraction, is a battle royale built around a train: you pay an entry in Nexor, ride in with the lobby, collect your stake from the bank and get back on the train before it leaves. Whatever you carry on board is yours."}}, {"@type": "Question", "name": "What is Nexor?", "acceptedAnswer": {"@type": "Answer", "text": "Nexor is the digital currency of LuckieLynx. You buy Nexor, use it to pay match entries and win more of it in matches. Nexor will be backed by real money, so you can cash out the Nexor you collect."}}, {"@type": "Question", "name": "Is it down to luck?", "acceptedAnswer": {"@type": "Answer", "text": "No. There are no dice, cards or slot machines. What you walk away with depends on how you play: the fights you win, the routes you take and when you decide to run for the train."}}, {"@type": "Question", "name": "What happens to Nexor that misses the train?", "acceptedAnswer": {"@type": "Answer", "text": "It goes into a pool. LuckieLynx takes a small percentage, and the rest is split between the players who made the train, based on the points they earned in the match."}}, {"@type": "Question", "name": "When can I play?", "acceptedAnswer": {"@type": "Answer", "text": "LuckieLynx is in development. Create an account to reserve your username, and we'll email you when the alpha opens if you ask us to."}}, {"@type": "Question", "name": "Do I need to be 18?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You need to be 18 or older to create a LuckieLynx account."}}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://luckielynx.com/#org", "name": "LuckieLynx", "alternateName": "LuckyLynx & Ace", "url": "https://luckielynx.com/", "logo": "https://luckielynx.com/assets/icon.png", "sameAs": ["https://discord.gg/nm3kwmGbHj", "https://luckylynxace.com"]}, {"@type": "WebSite", "@id": "https://luckielynx.com/#site", "name": "LuckieLynx", "url": "https://luckielynx.com/", "publisher": {"@id": "https://luckielynx.com/#org"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is LuckieLynx?", "acceptedAnswer": {"@type": "Answer", "text": "LuckieLynx is a skill-based play-to-earn game in development. Its main mode, Nexor Extraction, is a battle royale built around a train: you pay an entry in Nexor, ride in with the lobby, collect your stake from the bank and get back on the train before it leaves. Whatever you carry on board is yours."}}, {"@type": "Question", "name": "What is Nexor?", "acceptedAnswer": {"@type": "Answer", "text": "Nexor (NX) is the digital currency of LuckieLynx. It has a fixed value: 1 NX = $0.005, so $1 = 200 NX. You buy Nexor, use it to pay match entries and win more of it in matches. Nexor will be backed by real money, so you can cash out the Nexor you collect."}}, {"@type": "Question", "name": "Is it down to luck?", "acceptedAnswer": {"@type": "Answer", "text": "No. There are no dice, cards or slot machines. What you walk away with depends on how you play: the fights you win, the routes you take and when you decide to run for the train."}}, {"@type": "Question", "name": "What happens to Nexor that misses the train?", "acceptedAnswer": {"@type": "Answer", "text": "It goes into a pool. LuckieLynx takes a small percentage, and the rest is split between the players who made the train, based on the points they earned in the match."}}, {"@type": "Question", "name": "When can I play?", "acceptedAnswer": {"@type": "Answer", "text": "LuckieLynx is in development. Create an account to reserve your username, and we'll email you when the alpha opens if you ask us to."}}, {"@type": "Question", "name": "Do I need to be 18?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You need to be 18 or older to create a LuckieLynx account."}}]}]}</script>
 <title>LuckieLynx | Skill-based play-to-earn extraction game</title>
 <meta name="description" content="LuckieLynx is a skill-based play-to-earn extraction game. Pay your entry in Nexor, grab your stake from the bank and make the last train out to keep it.">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -263,6 +263,12 @@ h2 {
 .ledger .total { border-bottom: 0; }
 .ledger .total dt { color: var(--fg); font-weight: 600; }
 .ledger .total dd { color: var(--gold); }
+.ledger dd { text-align: right; }
+.ledger dd small { display: block; margin-top: 5px; font-family: var(--f-body); font-size: 12px; letter-spacing: 0; color: var(--muted); }
+.coin-key { margin: -8px 0 0; font-size: 13px; color: var(--muted); }
+.rate { margin: 0 0 14px; padding: 16px 18px; display: grid; gap: 8px; background: oklch(82% .14 88 / .07); box-shadow: inset 0 0 0 1px oklch(82% .14 88 / .35); }
+.rate p { margin: 0; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; }
+.rate b { font-family: var(--f-pixel); font-size: 13px; font-weight: 400; letter-spacing: .06em; color: var(--gold); }
 
 /* steps: six-step match flow */
 .steps.six { grid-template-columns: repeat(3, 1fr); }
@@ -584,19 +590,24 @@ footer .label { color: var(--muted); }
           <li><b>Play with it.</b><span>Match entries are paid in Nexor, and everything you win is paid in Nexor.</span></li>
           <li><b>Cash out.</b><span>Sell the Nexor you've collected back for money whenever you want.</span></li>
         </ol>
-        <p class="hint">The Nexor economy is still being built. Exchange rates and payment methods will be announced before launch.</p>
+        <div class="rate notched">
+          <span class="label"><span class="spark" aria-hidden="true"></span>Fixed rate</span>
+          <p><b>1 NX = $0.005</b><span>So $1 = 200 NX. The rate is fixed, both when you buy Nexor and when you cash out.</span></p>
+        </div>
+        <p class="hint">Payment methods will be announced before launch.</p>
       </div>
-      <figure class="entry-card notched" style="margin:0" aria-label="Example entry: 6 Nexor entry, 2 Nexor LuckieLynx fee, 4 Nexor waiting in the bank">
+      <figure class="entry-card notched" style="margin:0" aria-label="Example entry: 1,200 NX entry ($6), example LuckieLynx fee of 400 NX ($2), 800 NX ($4) waiting in the bank">
         <span class="label"><span class="spark" aria-hidden="true"></span>Example entry</span>
         <div class="coins" aria-hidden="true">
           <i class="coin"></i><i class="coin"></i><i class="coin"></i><i class="coin"></i><i class="coin fee"></i><i class="coin fee"></i>
         </div>
+        <p class="coin-key">Each coin is 200 NX, or $1.</p>
         <dl class="ledger">
-          <div><dt>Match entry</dt><dd>6 NX</dd></div>
-          <div><dt>LuckieLynx fee</dt><dd class="muted">−2 NX</dd></div>
-          <div class="total"><dt>Waiting for you in the bank</dt><dd>4 NX</dd></div>
+          <div><dt>Match entry</dt><dd>1,200 NX<small>$6</small></dd></div>
+          <div><dt>LuckieLynx fee (example)</dt><dd class="muted">−400 NX<small>$2</small></dd></div>
+          <div class="total"><dt>Waiting for you in the bank</dt><dd>800 NX<small>$4</small></dd></div>
         </dl>
-        <p class="hint">You pay 6 Nexor to join. After the fee, your 4 Nexor stake sits in the live bank until you reach it.</p>
+        <p class="hint">Example numbers only. Entry fees will vary between matches, and the LuckieLynx fee isn't set yet.</p>
       </figure>
     </div>
   </section>
@@ -627,7 +638,7 @@ footer .label { color: var(--muted); }
         <p class="sub">A battle royale built around a train. You don't need to be the last one standing. You need to be on board when it leaves.</p>
         <ul class="rules">
           <li><span class="spark" aria-hidden="true"></span><p style="margin:0"><b>Two banks, one is live.</b> <span>Each match, the Nexor goes to either the East or the West bank, far from where you drop.</span></p></li>
-          <li><span class="spark" aria-hidden="true"></span><p style="margin:0"><b>Your stake is your entry.</b> <span>Enter for 6 Nexor, and after a 2 Nexor fee you collect 4 from the bank.</span></p></li>
+          <li><span class="spark" aria-hidden="true"></span><p style="margin:0"><b>Your stake is your entry.</b> <span>For example, enter for 1,200 NX ($6), and after a 400 NX ($2) fee you collect 800 NX from the bank. Entry fees and the fee aren't final yet.</span></p></li>
           <li><span class="spark" aria-hidden="true"></span><p style="margin:0"><b>Carrying it makes you a target.</b> <span>Anyone you knock out drops their Nexor to you. Anyone can do the same to you.</span></p></li>
           <li><span class="spark" aria-hidden="true"></span><p style="margin:0"><b>Miss the train, lose it.</b> <span>The train leaves on time. Whatever isn't on it goes into the pool for the players on board.</span></p></li>
         </ul>
@@ -641,7 +652,7 @@ footer .label { color: var(--muted); }
         <div class="map-frame notched"><canvas id="map" width="64" height="40" aria-hidden="true"></canvas></div>
         <p class="phase" id="phase" aria-live="off"></p>
         <dl class="hud">
-          <div><dt>ENTRY</dt><dd>6 NX</dd></div>
+          <div><dt>ENTRY</dt><dd>1,200 NX</dd></div>
           <div><dt>BANK</dt><dd id="hud-bank" class="gold">EAST</dd></div>
           <div><dt>TRAIN</dt><dd id="hud-train" class="gold">03:30</dd></div>
           <div><dt>ALIVE</dt><dd id="hud-alive">24/24</dd></div>
@@ -704,7 +715,7 @@ footer .label { color: var(--muted); }
         </div>
         <div class="qa">
           <h3>What is Nexor?</h3>
-          <p>Nexor is the digital currency of LuckieLynx. You buy Nexor, use it to pay match entries and win more of it in matches. Nexor will be backed by real money, so you can cash out the Nexor you collect.</p>
+          <p>Nexor (NX) is the digital currency of LuckieLynx. It has a fixed value: 1 NX = $0.005, so $1 = 200 NX. You buy Nexor, use it to pay match entries and win more of it in matches. Nexor will be backed by real money, so you can cash out the Nexor you collect.</p>
         </div>
         <div class="qa">
           <h3>Is it down to luck?</h3>
