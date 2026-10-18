@@ -1,0 +1,12 @@
+{
+  "name": "luckielynx-site",
+  "private": true,
+  "description": "luckielynx.com: static site + download worker on Cloudflare, accounts on Supabase",
+  "scripts": {
+    "build": "python3 build.py",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.135.0"
+  }
+}
